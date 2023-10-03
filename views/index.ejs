@@ -1,0 +1,30 @@
+<%- include("header") -%>
+    <div class="container">
+        <div class="title">
+            <p id="title"> Todo List </p>
+        </div>
+
+        <form id="add" action="/" method="post">
+            <input type="text" name="search" id="search">
+            <button type="submit">Add <i class="fa fa-plus"></i></button>
+        </form>
+
+        <div class="lists">
+
+             <!-- <%  Items.forEach(item => { %> -->
+                <li>
+                        <p> <%= item.name %> </p>
+                        <form action="/functions" method="post" class="btns">
+                            
+                             <button id="delete" name="delete" value="<%= item._id %>"><i class="fa fa-trash"></i></button>
+                        </form>
+                    </li>
+           <!-- <% }) %> -->
+
+
+
+                
+               
+        </div>
+    </div>
+<%- include("footer") -%>
